@@ -4,6 +4,7 @@ import {Camera} from "./components/Camera";
 import {player} from "./components/Player";
 import {map, initializeMap} from "./components/Map";
 import './style.css';
+import {DirectionalLight} from "./components/DirectionalLight.js";
 
 
 const scene = new THREE.Scene();
@@ -13,8 +14,7 @@ scene.add(map);
 const ambientLight = new THREE.AmbientLight();
 scene.add(ambientLight);
 
-const dirlight = new THREE.DirectionalLight();
-dirlight.position.set(-100, -100, 200);
+const dirlight = DirectionalLight();
 scene.add(dirlight);
 
 
